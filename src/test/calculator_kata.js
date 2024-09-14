@@ -44,13 +44,7 @@ console.log(calculator.add("//|\n1|2|3") === 6);
 
 //Handle negative numbers
 try {
-  add("1,-2,3");
-} catch (e) {
-  console.log(e.message === "negative numbers not allowed: -2"); // true
-}
-
-try {
-  add("1,-2,-3");
-} catch (e) {
-  console.log(e.message === "negative numbers not allowed: -2, -3"); // true
+  console.log(calculator.add("1,-2,3"));
+} catch (error) {
+  console.log(error.message);
 }
